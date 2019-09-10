@@ -33,9 +33,6 @@ class ProductController extends BaseController
 
         $products = Product::all();
 
-        return function() use($products){
-            echo $products;
-        };
         return $this->sendResponse($products->toArray(), 'Products retrieved successfully.');
 
     }
